@@ -1,4 +1,4 @@
-from constructores.Constructores import  insertarAuto
+from constructores.Constructores import  *
 from ui.vista import *
 from controlador.UsuariosControllers import buscarUsuario, validarContraseña, menu
 from constructores.Constructores import insertarAuto

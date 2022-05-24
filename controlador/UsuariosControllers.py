@@ -1,11 +1,14 @@
 from asyncio.windows_events import NULL
-from modelo.Usuario import Usuario
+from modelo.Usuario import *
 from data.Usuarios import _usuariosRegistrados
 from data.Usuarios import agregarUsuario, printUsuarios
 from ui.vista import *
 
 
-user = Usuario('','','','','')
+
+user = UsuarioAdmin('','','','','')
+user = UsuarioEmpleado('','','','','')
+user = UsuarioInvitado('','','','','')
 
 def buscarUsuario(correo):
     for usuario in _usuariosRegistrados:

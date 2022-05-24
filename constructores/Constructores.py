@@ -2,13 +2,13 @@ from data.Usuarios import *
 from data.Moto import agregarMotos
 from data.Acoplado import agregarAcoplados
 from data.Bicicleta import agregarBicicletas
-from data.Camion import agregarCamiones
+from data.Camion import *
 from data.Camioneta import agregarCamionetas
 from data.Colectivo import agregarColectivos
 from data.Auto import agregarAutos
 
 
-from modelo.Usuario import Usuario
+from modelo.Usuario import UsuarioInvitado, UsuarioEmpleado, UsuarioAdmin
 from modelo.Acoplado import Acoplado
 from modelo.Moto import Moto
 from modelo.Bicicleta import Bicicleta
@@ -19,14 +19,14 @@ from modelo.Camioneta import Camioneta
 
 
 def crearUsuario():
-    usuario = Usuario('Belen', 'Camargo','belen@gmail.com', 'contraseña1' ,'3')
-    agregarUsuario(usuario)
+    usuario_admin = UsuarioAdmin('Belen', 'Camargo','belen@gmail.com', 'contraseña1' ,1)
+    agregarUsuario(usuario_admin)
 
-    usuario = Usuario('Juan', 'Perez','juan@gmail.com', 'contraseña2' ,'2')
-    agregarUsuario(usuario)
+    usuario_empleado = UsuarioEmpleado('Juan', 'Perez','juan@gmail.com', 'contraseña2' ,2)
+    agregarUsuario(usuario_empleado)
 
-    usuario = Usuario('Pedro', 'Garcia','pedro@gmail.com', 'contraseña3' ,'1')
-    agregarUsuario(usuario)
+    usuario_invitado = UsuarioInvitado('Pedro', 'Garcia','pedro@gmail.com', 'contraseña3' ,3)
+    agregarUsuario(usuario_invitado)
 
 def crearAuto():
     auto = Auto('VW', 'Gol trend', 65000, 'opticas opacas')
