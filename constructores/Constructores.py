@@ -28,8 +28,23 @@ def crearUsuario():
     usuario_invitado = UsuarioInvitado('Pedro', 'Garcia','pedro@gmail.com', 'contraseña3' ,3)
     agregarUsuario(usuario_invitado)
 
+def agregarUsuariosNuevos():
+        nombre = input("Ingrese el nombre: ")
+        apellido = input("Ingrese el apellido: ")
+        correo = input("Ingrese el correo: ")
+        contraseña = input("Ingrese la contraseña: ")
+        nivelUsuario = input("Ingrese el nivel de usuario [1: admin] [2: empleado] [3: invitado]: ")
+        if (nivelUsuario == 1):
+            usuario_ingresado = UsuarioAdmin(nombre, apellido,correo,contraseña)
+        if (nivelUsuario == 2):
+            usuario_ingresado = UsuarioEmpleado(nombre, apellido,correo,contraseña)
+        if (nivelUsuario == 3):
+            usuario_ingresado = UsuarioInvitado(nombre, apellido,correo,contraseña)
+        
+
+
 def crearAuto():
-    auto = Auto('VW', 'Gol trend', 65000, 'opticas opacas')
+    auto = Auto('VW', 'Gol trend', 65000, 800.000, 'opticas opacas')
     agregarAutos(auto)
 
 def insertarAuto():
@@ -41,7 +56,7 @@ def insertarAuto():
     agregarAutos(auto_ingresado)
 
 def crearMoto():
-    moto = Moto('Honda', 'Wave', '2013', '150cc', 23000, 123456789 ,'Ruedas gastadas')
+    moto = Moto('Honda', '2013', '150cc', 23000, 160.000 ,'Ruedas gastadas')
     agregarMotos(moto)
 
 def insertarMoto():
@@ -55,7 +70,7 @@ def insertarMoto():
     agregarMotos(moto_ingresada)
 
 def crearAcoplado():
-    acoplado = Acoplado('Rojo', 'Grande', '18 toneladas',123456789, 'Pintura gastadas')
+    acoplado = Acoplado('Rojo', 'Grande', '18 toneladas',300.000, 'Pintura gastadas')
     agregarAcoplados(acoplado)
 
 def insertarAcoplado():
@@ -68,7 +83,7 @@ def insertarAcoplado():
     agregarAcoplados(acoplado_ingresado)
 
 def crearBicicleta():
-    bicicleta = Bicicleta('Verde', 'Venzo', '29',123456789, 'Excelente estado')
+    bicicleta = Bicicleta('Verde', 'Venzo', '29',40.000, 'Excelente estado')
     agregarBicicletas(bicicleta)
 
 def insertarBicicleta():
@@ -81,7 +96,7 @@ def insertarBicicleta():
     agregarBicicletas(bicicleta_ingresada)
 
 def crearCamion():
-    camion = Camion('Mercedes Benz', '2020',120000,123456789, 'Excelente estado')
+    camion = Camion('Mercedes Benz', '2020',120000,11000000, 'Excelente estado')
     agregarCamiones(camion)
 
 def insertarCamion():
@@ -94,7 +109,7 @@ def insertarCamion():
     agregarCamiones(camion_ingresado)
 
 def crearCamioneta():
-    camioneta = Camioneta('Ford', '2021',2,120000,123456789, 'Excelente estado')
+    camioneta = Camioneta('Ford', '2021',2 ,120000,5000000, 'Excelente estado')
     agregarCamionetas(camioneta)
 
 def insertarCamioneta():
@@ -108,7 +123,7 @@ def insertarCamioneta():
     agregarCamionetas(camioneta_ingresada)
 
 def crearColectivo():
-    colectivo = Colectivo('Mercedes Benz', '2019',30,123456789, 'Excelente estado')
+    colectivo = Colectivo('Mercedes Benz', '2019',30,200000, 5000000, 'Excelente estado')
     agregarColectivos(colectivo)
 
 def insertarColectivo():
@@ -116,8 +131,9 @@ def insertarColectivo():
     modelo = input ("Ingrese el modelo: ")
     pasajeros = input("Ingrese el total de pasajeros: ")
     precio = input("Ingrese el precio: ")
+    km = input("Ingrese los kilometros: ")
     detalles = input("Ingrese los detalles: ")
-    colectivo_ingresado = Colectivo(marca, modelo, pasajeros,precio, detalles)
+    colectivo_ingresado = Colectivo(marca, modelo, pasajeros,precio,km, detalles)
     agregarColectivos(colectivo_ingresado)
 
 

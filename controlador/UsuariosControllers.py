@@ -1,10 +1,8 @@
 from asyncio.windows_events import NULL
 from modelo.Usuario import *
 from data.Usuarios import _usuariosRegistrados
-from data.Usuarios import agregarUsuario, printUsuarios
+from data.Usuarios import *
 from ui.vista import *
-
-
 
 user = UsuarioAdmin('','','','','')
 user = UsuarioEmpleado('','','','','')
@@ -41,4 +39,4 @@ def menuEmpleado():
     Empleado()
     
 def menuInvitado():
-   Invitado()
+    Invitado()

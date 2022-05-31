@@ -10,4 +10,6 @@ class Camion():
                 return str(self.__dict__)
 
         def __str__(self) -> str:
-                return f'Detalles {self.detalles}'
+                return f'Marca: {self.marca} Modelo: {self.modelo} Kilometros: {self.km} Precio:{self.precio} Detalles {self.detalles}'
+                
+                
