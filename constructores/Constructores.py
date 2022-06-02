@@ -44,15 +44,16 @@ def agregarUsuariosNuevos():
 
 
 def crearAuto():
-    auto = Auto('VW', 'Gol trend', 65000, 800.000, 'opticas opacas')
+    auto = Auto('VW', 'Gol trend', 65000, 800000, 'opticas opacas')
     agregarAutos(auto)
 
 def insertarAuto():
-    marca = input("Ingrese la marca")
+    marca = input("Ingrese la marca: ")
     modelo = input("Ingrese el modelo: ")
     km = input ("Ingrese los kilometros: ")
+    precio = input("Ingrese el precio: ")
     detalles = input("Ingrese los detalles: ")
-    auto_ingresado = Auto(marca, modelo, km, detalles)
+    auto_ingresado = Auto(marca, modelo, km,precio, detalles)
     agregarAutos(auto_ingresado)
 
 def crearMoto():
@@ -60,7 +61,7 @@ def crearMoto():
     agregarMotos(moto)
 
 def insertarMoto():
-    marca = input("Ingrese la marca")
+    marca = input("Ingrese la marca: ")
     modelo = input("Ingrese el modelo: ")
     cilindrada = input ("Ingrese las cilindradas: ")
     kilometros = input ("Ingrese los kilometros: ")
